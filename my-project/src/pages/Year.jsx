@@ -2,11 +2,9 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Year = () => {
-  const [year, setYear] = useState(new Date().getFullYear()); // Set tahun default
+  const [year, setYear] = useState(new Date().getFullYear())
   const navigate = useNavigate();
-
-  const handleYearClick = (yearOption) => {
-    // Navigasi ke halaman video berdasarkan tahun yang dipilih
+  const handleYearClick = (yearOption) => {  
     navigate(`/year/${yearOption}`);
   };
 

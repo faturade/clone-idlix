@@ -6,7 +6,7 @@ import TvSeries from './pages/TvSeries';
 import YearComponent from './pages/Year'; 
 import Genres from './pages/Genre';
 import MovieDetail from './pages/MovieDetail';
-import MoviesByGenre from './pages/MoviesByGenre'; // Import komponen baru
+import MoviesByGenre from './pages/MoviesByGenre'; 
 import TvDetail from './pages/TvDetail';
 import YearVideos from './pages/YearVideos';
 import Footer from './components/Footer';

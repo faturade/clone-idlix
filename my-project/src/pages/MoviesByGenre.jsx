@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
-import { getMoviesByGenre } from '../Services/movieService'; // Import fungsi untuk mendapatkan film berdasarkan genre
+import { getMoviesByGenre } from '../Services/movieService';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faStar } from '@fortawesome/free-solid-svg-icons';
 
 const MoviesByGenre = () => {
-  const { id } = useParams(); // Ambil genre ID dari parameter URL
-  const navigate = useNavigate(); // Navigasi ke halaman detail film
-  const location = useLocation(); // Ambil state dari navigasi
+  const { id } = useParams(); 
+  const navigate = useNavigate(); 
+  const location = useLocation(); 
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
-  const genreName = location.state?.genreName || "Movies"; // Ambil nama genre atau gunakan default
+  const genreName = location.state?.genreName || "Movies";
 
   useEffect(() => {
     const fetchMoviesByGenre = async () => {
@@ -41,7 +41,7 @@ const MoviesByGenre = () => {
           <div 
             key={movie.id} 
             className="movie-item relative rounded-xl overflow-hidden cursor-pointer"
-            onClick={() => navigate(`/movie/${movie.id}`)} // Navigasi saat film diklik
+            onClick={() => navigate(`/movie/${movie.id}`)}
           >
             <div className="flex justify-center items-center">
               <img

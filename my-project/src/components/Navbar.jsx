@@ -8,7 +8,7 @@ const Navbar = ({ onSearch }) => {
 
   const handleSearchInputChange = (e) => {
     setQuery(e.target.value);
-    onSearch(e.target.value); // Setiap perubahan input akan dikirim ke App.js
+    onSearch(e.target.value);
   };
 
   return (
@@ -42,7 +42,7 @@ const Navbar = ({ onSearch }) => {
             type="text"
             placeholder="Search..."
             value={query}
-            onChange={handleSearchInputChange} // Meneruskan input pencarian
+            onChange={handleSearchInputChange}
             className="bg-gray-700 text-white focus:outline-none"
           />
           <FontAwesomeIcon icon={faSearch} className="text-white ml-2" />

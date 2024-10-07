@@ -13,22 +13,18 @@ export const getTVEpisodes = async (tvShowId, seasonNumber) => {
   return response.data;
 };
 
-// Fungsi untuk mendapatkan film Now Playing
 export const getNowPlayingMovies = (page = 1) => {
   return apiClient.get(`/movie/now_playing?language=en-US&page=${page}`);
 };
 
-// Fungsi untuk mendapatkan film Popular
 export const getPopularMovies = (page = 1) => {
   return apiClient.get(`/movie/popular?language=en-US&page=${page}`);
 };
 
-// Fungsi untuk mendapatkan film Top Rated
 export const getTopRatedMovies = (page = 1) => {
   return apiClient.get(`/movie/top_rated?language=en-US&page=${page}`);
 };
 
-// Fungsi untuk mendapatkan film Upcoming
 export const getUpcomingMovies = (page = 1) => {
   return apiClient.get(`/movie/upcoming?language=en-US&page=${page}`);
 };
@@ -61,7 +57,6 @@ export const getTrendingMovies = (page = 1) => {
   return apiClient.get(`/trending/movie/day?language=en-US&page=${page}`);
 };
 
-// Fungsi untuk mendapatkan detail film berdasarkan ID
 export const getMovieDetails = (id) => {
   return apiClient.get(`/movie/${id}?language=en-US`);
 };
@@ -78,7 +73,6 @@ export const getTVCredits = (id) => {
   return apiClient.get(`/tv/${id}/credits?language=en-US`);
 };
 
-// Fungsi untuk mendapatkan film yang mirip berdasarkan ID film
 export const getSimilarMovies = (id, page = 1) => {
   return apiClient.get(`/movie/${id}/similar?language=en-US&page=${page}`);
 };
@@ -87,17 +81,14 @@ export const getSimilarTVShows = (id, page = 1) => {
   return apiClient.get(`/tv/${id}/similar?language=en-US&page=${page}`);
 };
 
-// Fungsi untuk mendapatkan kata kunci film berdasarkan ID film
 export const getMovieKeywords = (id) => {
   return apiClient.get(`/movie/${id}/keywords?language=en-US`);
 };
 
-// Fungsi untuk mendapatkan rekomendasi film berdasarkan ID film
 export const getMovieRecommendations = (id, page = 1) => {
   return apiClient.get(`/movie/${id}/recommendations?language=en-US&page=${page}`);
 };
 
-// Fungsi untuk mendapatkan detail video film berdasarkan ID film
 export const getMovieVideos = (id) => {
   return apiClient.get(`/movie/${id}/videos?language=en-US`);
 };
@@ -106,12 +97,10 @@ export const getTVVideos = (id) => {
   return apiClient.get(`/tv/${id}/videos?language=en-US`);
 };
 
-// Fungsi untuk mendapatkan detail gambar film berdasarkan ID film
 export const getMovieImages = (id) => {
   return apiClient.get(`/movie/${id}/images?language=en-US`);
 };
 
-// Fungsi untuk mendapatkan detail ulasan film berdasarkan ID film
 export const getMovieReviews = (id, page = 1) => {
   return apiClient.get(`/movie/${id}/reviews?language=en-US&page=${page}`);
 };

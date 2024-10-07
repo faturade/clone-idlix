@@ -81,7 +81,7 @@ const TVDetail = () => {
 
   const genreList = tvShow.genres.map((genre) => genre.name).join(', ');
   const filledStars = Math.round(tvShow.vote_average / 2);
-  const totalStars = 5; // Adjust if necessary
+  const totalStars = 5; 
 
   const handleClick = (id) => {
     navigate(`/tv-detail/${id}`);
@@ -89,7 +89,6 @@ const TVDetail = () => {
 
   return (
     <div className="mt-8 p-8 bg-gray-800 rounded-lg">
-      {/* TV Show Details */}
       <div className="flex flex-col md:flex-row gap-8">
         <div className="w-full md:w-1/6">
           <img
@@ -121,8 +120,6 @@ const TVDetail = () => {
           </div>
         </div>
       </div>
-
-      {/* Tab Navigation */}
       <div className="mt-12">
         <div className='border-b-2 border-gray-600 border-t-2'>
           <div className="flex gap-4 py-3">
@@ -216,15 +213,13 @@ const TVDetail = () => {
           )}
         </div>
       </div>
-
-      {/* Similar TV Shows */}
       <div className="mt-8 border-t-2 border-gray-600">
         <div className="mt-8 border-l-4 border-red-600">
           <h2 className="text-xl font-semibold ml-2 text-gray-200">TV Show Terkait</h2>
         </div>
         <Swiper
-            spaceBetween={14} // Jarak antar slide
-            slidesPerView={8} // Menampilkan 6 gambar pada ukuran layar besar
+            spaceBetween={14} 
+            slidesPerView={8} 
             grabCursor={true}
             breakpoints={{
             640: {
@@ -265,7 +260,7 @@ const TVDetail = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-md font-semibold text-white hover:text-red-600 mt-2">{show.name}</h3> {/* Perbaiki di sini */}
+                  <h3 className="text-md font-semibold text-white hover:text-red-600 mt-2">{show.name}</h3>
                 </div>
             </SwiperSlide>
             ))}

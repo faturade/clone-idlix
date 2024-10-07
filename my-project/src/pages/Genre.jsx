@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getMovieGenres } from '../Services/movieService'; // Fungsi untuk fetch genres dari API
+import { getMovieGenres } from '../Services/movieService';
 
 const Genres = () => {
   const [genres, setGenres] = useState([]);
-  const navigate = useNavigate(); // Hook untuk navigasi
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchGenres = async () => {
@@ -19,9 +19,8 @@ const Genres = () => {
     fetchGenres();
   }, []);
 
-  // Fungsi untuk handle klik genre dan navigasi ke halaman movie berdasarkan genre ID
   const handleGenreClick = (genreId, genreName) => {
-    navigate(`/genre/${genreId}`, { state: { genreName } }); // Navigasi ke route genre dengan nama genre
+    navigate(`/genre/${genreId}`, { state: { genreName } });
   };
 
   return (
@@ -34,7 +33,7 @@ const Genres = () => {
           {genres.map((genre) => (
             <li
               key={genre.id}
-              onClick={() => handleGenreClick(genre.id, genre.name)} // Navigasi ketika genre diklik dengan nama genre
+              onClick={() => handleGenreClick(genre.id, genre.name)}
               className="text-xl text-white w-1/4 cursor-pointer bg-gray-700 p-3 text-center shadow-lg hover:bg-gray-600"
             >
               {genre.name}

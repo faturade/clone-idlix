@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom'; 
 import { getPopularTVShows, getAiringTodayTVShows, getTopRatedTVShows, getOnTheAirTVShows } from '../Services/movieService';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faStar } from '@fortawesome/free-solid-svg-icons';
@@ -11,7 +11,7 @@ const TvSeries = () => {
   const [onTheAirShows, setOnTheAirShows] = useState([]);
   const [error, setError] = useState(null);
 
-  const navigate = useNavigate(); // Inisialisasi useNavigate
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchTvShows = async () => {
@@ -38,7 +38,7 @@ const TvSeries = () => {
   }
 
   const handleClick = (id) => {
-    navigate(`/tv-detail/${id}`); // Menavigasi ke halaman detail dengan ID TV show
+    navigate(`/tv-detail/${id}`);
   };
 
   const renderTvShows = (tvShowsToRender, title) => (
@@ -50,7 +50,7 @@ const TvSeries = () => {
         {tvShowsToRender.map((show) => (
           <div 
             key={show.id} 
-            onClick={() => handleClick(show.id)} // Tambahkan onClick untuk menavigasi ke halaman detail
+            onClick={() => handleClick(show.id)} 
             className="movie-item relative rounded-xl overflow-hidden cursor-pointer">
             <div className="flex justify-center items-center">
               <img

@@ -6,20 +6,19 @@ import { faPlay, faStar } from '@fortawesome/free-solid-svg-icons';
 
 const YearVideos = () => {
   const { year } = useParams();
-  const navigate = useNavigate();  // Ambil parameter tahun dari URL
-  const [videos, setVideos] = useState([]); // Mendefinisikan state videos untuk menampung data video
+  const navigate = useNavigate(); 
+  const [videos, setVideos] = useState([]); 
 
   useEffect(() => {
-    // Ambil video berdasarkan tahun saat halaman dibuka
-    fetchVideosByYear(year); // Panggil fungsi untuk mengambil data video berdasarkan tahun
+     fetchVideosByYear(year);
   }, [year]);
 
   const fetchVideosByYear = async (year) => {
     try {
-      const response = await getMoviesByYear(year); // Panggil API getMoviesByYear dari movieService
-      setVideos(response.data.results); // Simpan data video dalam state videos
+      const response = await getMoviesByYear(year); 
+      setVideos(response.data.results); 
     } catch (error) {
-      console.error('Error fetching videos:', error); // Tampilkan error jika terjadi masalah
+      console.error('Error fetching videos:', error);
     }
   };
 

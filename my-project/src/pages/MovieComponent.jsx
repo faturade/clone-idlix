@@ -22,7 +22,7 @@ const MovieListComponent = ({ searchQuery }) => {
   const [filteredMovies, setFilteredMovies] = useState([]);
   const [error, setError] = useState(null);
 
-  const navigate = useNavigate(); // Tambahkan useNavigate
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -93,7 +93,7 @@ const MovieListComponent = ({ searchQuery }) => {
           <div 
             key={movie.id} 
             className="movie-item relative rounded-xl overflow-hidden cursor-pointer"
-            onClick={() => navigate(`/movie/${movie.id}`)} // Navigasi saat film diklik
+            onClick={() => navigate(`/movie/${movie.id}`)}
           >
             <div className="flex justify-center items-center">
               <img

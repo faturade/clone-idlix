@@ -227,8 +227,8 @@ const MovieDetail = () => {
           <h2 className="text-xl font-semibold ml-2 text-gray-200">TV Show Terkait</h2>
         </div>
         <Swiper
-            spaceBetween={14} // Jarak antar slide
-            slidesPerView={8} // Menampilkan 6 gambar pada ukuran layar besar
+            spaceBetween={14}
+            slidesPerView={8}
             grabCursor={true}
             breakpoints={{
             640: {
@@ -269,7 +269,7 @@ const MovieDetail = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-md font-semibold text-white hover:text-red-600 mt-2">{similarMovie.name}</h3> {/* Perbaiki di sini */}
+                  <h3 className="text-md font-semibold text-white hover:text-red-600 mt-2">{similarMovie.name}</h3> 
                 </div>
             </SwiperSlide>
             ))}
